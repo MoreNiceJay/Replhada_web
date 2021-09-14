@@ -8,11 +8,13 @@
   height: 70px;
   overflow: hidden;
   z-index: 1000;
-  background-color: #fcfcfc;
+  background-color: #fff;
+  transition:all 0.4s ease 0s;
+
 }
 .nav-stickey {
   animation: nav-enter-anim 0.15s ease-in;
-  background-color: #fcfcfc;
+  background-color: #fff;
   position: fixed;
   -webkit-box-shadow: 0 8px 6px -6px #fcfcfc;
   -moz-box-shadow: 0 8px 6px -6px #fcfcfc;
@@ -34,8 +36,9 @@
   flex-direction: column;
   justify-content: center;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #23182c;
+  letter-spacing:-0.5px;
 }
 
 .nav-links__container {
@@ -53,17 +56,18 @@
 .nav .nav-link__text {
   margin: auto 0px;
   padding: 0px 12px;
-  color: #23182c;
-  font-size: 1.2rem;
-  font-weight: 300;
+  color: #161c2d;
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 0.4s ease 0s;
 }
 
 .nav-link__background {
   margin-top: -2px;
   height: 2px;
   width: 0%;
-  background: #fcfcfc;
-  transition: 0.2s all ease-in;
+  background: #fff27f;
+  transition: all 0.4s ease 0s;
 }
 .nav-link:hover .nav-link__background {
   width: 100%;

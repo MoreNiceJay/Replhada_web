@@ -12,12 +12,12 @@ function Navbar({ links }) {
   return (
     <Container>
       <div
-        className={`nav${scrollY > stickeyTrigger ? " nav-stickey" : ""}${
-          menuOpen ? " nav-open" : ""
-        }`}
+        className={`nav${scrollY > stickeyTrigger ? " nav-stickey" : ""}${menuOpen ? " nav-open" : ""
+          }`}
       >
         <div className="nav-content">
-          <div className="nav-logo">Felisity</div>
+          <div className="nav-logo">             <img src="./images/replhadalogo_2.png" alt="App Preview" style={{ height: "18px", }} />
+          </div>
 
           <nav className="nav-links__container">
             {links &&
@@ -44,8 +44,8 @@ function Navbar({ links }) {
 
 Navbar.defaultProps = {
   links: [
-    { title: "Main", href: "#home" },
-    { title: "Contact", href: "#contact" }
+    { title: "Main", href: "/" },
+    { title: "Contact", href: "/contact" }
     // { title: "Services", href: "#services" },
     // { title: "Pricing", href: "#pricing" },
     // { title: "Contact", href: "#contact" }
