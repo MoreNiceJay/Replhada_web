@@ -2,13 +2,36 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
 
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 300;
+  src:url("../fonts/NanumGothic-Regular.ttf") format("ttf"),
+ 
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src:url("../fonts/NanumGothic-ExtraBold.ttf") format("ttf"),
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 500;
+  src:url("../fonts/NanumGothic-Bold.ttf") format("ttf"),
+ 
+}
+
+
 html,
 body {
   width: 100%;
   padding: 0px;
   margin: 0px;
   font-size: 16px;
-  font-family: "'Spoqa Han Sans', 'Spoqa Han Sans JP',Nunito", sans-serif;
+  font-family: 'Nanum Gothic','segoe-ui-black-regular','Spoqa Han Sans', 'Spoqa Han Sans JP', "Nunito", "sans-serif";
+
 }
 
 main {
@@ -481,4 +504,53 @@ section#download .section-image {
 .col-30 {
   width: 30%;
   padding: 0px 14px;
+}
+
+@media screen and (max-width: 768px) {
+.contact_title_section_title{
+
+}
+  .contact_info_section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 40px;
+  box-sizing: border-box;
+  min-width: 0px;
+  border-radius: 10px;
+  background-color: rgb(247, 247, 251);
+  padding: 80px ;
+}
+.contact_info{
+  margin:24px;
+}
+.send_message_container{
+  justify-content: center;
+  align-items: center;
+  display:block;
+}
+
+.message_content_container{
+  width: calc(100% );
+}
+.message_content_textfield{
+  width: calc(100% - 40px );
+  margin:auto;
+
+}
+.message_send_button{
+  width: calc(100% - 40px );
+  
+}
+.message_send_button_container{
+  width: calc(100% );
+  text-align: center;
+
+}
+.contact_title_section_descryption{
+  margin:40px
+}
 }

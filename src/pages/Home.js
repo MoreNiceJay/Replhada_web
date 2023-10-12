@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/styles.css";
+import "./Home.css";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
@@ -34,6 +34,7 @@ const useStyles = makeStyles({
 
 export default function Home() {
     const classes = useStyles();
+    window.location.replace('https://www.tpcompany.net/');
 
     return (
 
@@ -41,28 +42,130 @@ export default function Home() {
 
             <Navbar />
             <main>
-                <HeroBanner />
-                <div style={{ width: "100%", height: "700px", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+                {/* <HeroBanner /> */}
+                <div className="main_container_above" />
+                <div className="main_container">
+                    <div className="main_side">
+                        <div className="main_image_container">
+                            <img className="main_image" src="./images/replhada-right.jpg" alt="google play store" />
+                        </div>
 
-                    <iframe style={{ padding: "24px", minWidth: '560px', minHeight: "315px" }} src="https://www.youtube.com/embed/eBCmgUL-Me8?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <span style={{ marginTop: "50px", fontSize: "16px", letterSpacing: "-.5px", lineHeight: "1.75", fontWeight: "300", margin: "0 32px" }}>리플하다는 플라스틱을 줄이기 위해 다회용기 순환 프로세스를 구축합니다
+                        <div className="main_text_container">
+                            <div className="main_text">
+                                <p className="main_text_title">내손 안의 에코 메이트</p>
+                                <p className="main_text_des">우리의 작은 노력이 환경을 생각하는 선한 영향력이 되어 세상을 변화 시킬 수 있습니다.
+                                    <br /> 리플하다의 파트너가 되어 아름다운 환경을 지키는 일에 동참 해주세요.
+                                </p>
+                            </div>
+                            <div className="main_button">
+                                <a href="https://apps.apple.com/kr/app/%EB%A6%AC%ED%94%8C%ED%95%98%EB%8B%A4/id1585597341" className="download-btn__img">
+                                    <img src="./images/app_btn1.webp" alt="app store" />
+                                </a>
+                                <a href="https://play.google.com/store/apps/details?id=com.replhada.replhada" className="download-btn__img">
+                                    <img src="./images/app_btn2.webp" alt="google play store" />
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                {/* vidoe */}
+                <div className="vidoe_container">
+
+                    <iframe className="vidoe" src="https://www.youtube.com/embed/eBCmgUL-Me8?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <span className="vidoe_des" >일회용 플라스틱을 줄이기 위한, 리플하다의 solution을 소개 합니다.
+
                     </span>
                 </div>
+                {/* vidoe */}
 
+                {/* businessModel */}
+                <div className="business_container">
+                    <p className="zerowaste_title">
+                        Business Model
 
-                <div style={{ width: "100%", height: "600px", backgroundColor: "#fff", display: "flex", flexDirection: "column", justifyContent: "start", alignItems: "center" }}>
+                    </p>
+                    <div className="business_image_container_margin">
+                        <div className="business_image_container">
+                            <div className="business_image1_container">
+                                <img className="business_image1" src="./images/businessModel.png" alt="google play store" />
+                            </div>
+                            <div className="business_image2_container">
 
-                    <span style={{ marginTop: "24px", fontSize: "32px", letterSpacing: "-.8px", lineHeight: "1.29", fontWeight: "700", marginBottom: "32px" }}>모바일 앱으로 실천하는 제로 웨이스트</span>
-                    <span style={{ width: "60%", marginTop: "24px", fontSize: "16px", letterSpacing: "-.5px", lineHeight: "1.75", fontWeight: "300", color: "#666666", margin: "0 32px" }}>리플하다는 하루에 5만톤씩 버려지는 일회용기를 리플하다의 다회용기로 대체해나가고 있습니다. 환경을 생각하는 소비자가 조금 더 편하게 친환경을 실천 할 수 있도록, 가맹점이 미래를 생각하는 올바른 결정을 돕도록,  다회용기 순환의 엔드투엔드 서비스를 제공합니다. </span>
-                    <Card style={{ marginTop: "60px", borderRadius: "20px", padding: "20px", paddingBottom: "40px", width: "70%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+                                <img className="business_image2" src="./images/screenshot.png" alt="google play store" />
+                            </div>
+                        </div>
+                        <div className="business_text_container">
+                            <p className="business_text1">
+                                리플하다의 파트너로 등록하시면, 추가 수익을 기대 할 수 있습니다.
 
-                        <img style={{ width: "80%", }} src="./images/service.png" alt="google play store" />
+                            </p>
+                            <p className="business_text2">
+                                지속적인 partnership 은 물론, 플랫폼이 효과적으로 운용될 수 있도록 서비스 개선에 항상 노력할 것입니다.
 
-                    </Card>
-
-
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div style={{ marginTop: "150px", width: "100%", height: "600px", backgroundColor: "#fff", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
+
+                {/* businessModel */}
+
+                {/* zero waste */}
+                <div className="zerowaste_container">
+
+                    <div className="zerowaste_text_container" >
+                        <span className="zerowaste_title" >모바일 앱으로 실천하는 제로 웨이스트</span>
+                        <span className="zerowaste_des" >리플하다는 일회용기를 다회용기로 대체해 나가기 위해 앞장서고 있습니다.환경을 생각하는 소비자가 조금 더 편하게 zero waste 를 실천 할 수 있도록 다양한 다회용기 개발과 보급에 노력 하고 있습니다.</span>
+                        {/* <Card className="zerowaste_text_image_card" > */}
+                        <img className="zerowaste_text_image" src="./images/service.png" alt="google play store" />
+                        {/* </Card  > */}
+                    </div>
+                    <div className="zerowaste_image_container" >
+                        <div className="zerowaste_image_container1" >
+                            <img src="./images/supply1.png" alt="google play store" className="zerowaste_image1" />
+
+                        </div>
+                        <div className="zerowaste_image_container2" >
+                            <img className="zerowaste_image2" src="./images/supply2.png" alt="google play store" />
+                        </div>
+                    </div>
+                </div>
+
+
+
+                {/* zero waste */}
+
+                {/* pics */}
+                <div className="pics_container" >
+                    <div className="pics_container_container" >
+                        <div className="pics_pic1_container" >
+                            <img className="pics_pic1" src="./images/green.jpg" alt="google play store" ></img>
+                            <span className="pics_pic_text" > 환경과</span>
+                        </div>
+                        <div className="pics_pic2_container" >
+                            <img className="pics_pic2" src="./images/grim4.jpg" alt="google play store" ></img>
+                            <span className="pics_pic_text" > 배달음식</span>
+                        </div>
+                        <div className="pics_pic3_container" >
+                            <img className="pics_pic3" src="./images/grim2.png" alt="google play store"></img>
+                            <div className="pics_pic3_lastText" >
+                                <span className="pics_pic_text3" >어느 것도  <span className="pics_pic_text5">놓칠 수 없다면...</span></span>
+                                <span className="pics_pic_text4" ><span className="pics_pic_text4">리플하다</span> 입니다</span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div className="pics_text_container" >
+                    </div>
+                </div>
+
+
+
+
+                {/* <div style={{ marginTop: "150px", width: "100%", height: "600px", backgroundColor: "#fff", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
                     <div style={{ width: "50%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", }}>
 
                         <span style={{ marginTop: "24px", fontSize: "32px", letterSpacing: "-.8px", lineHeight: "1.29", fontWeight: "700", marginBottom: "42px" }}> 환경을 위한 선택</span>
@@ -75,7 +178,7 @@ export default function Home() {
 
                 <div style={{ width: "100%", height: "600px", backgroundColor: "#fff", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
                     <div style={{ width: "50%", height: "100%" }}>
-                        <img style={{ width: "100%", height: "100%" }} src="./images/clean.jpg" alt="google play store" />
+                        <img style={{ width: "100%", height: "100%" }} src="./images/grim4.jpg" alt="google play store" />
                     </div>
                     <div style={{ width: "50%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", }}>
 
@@ -93,12 +196,21 @@ export default function Home() {
                         <span style={{ marginTop: "24px", fontSize: "16px", letterSpacing: "-.5px", lineHeight: "1.75", fontWeight: "400", color: "#666666", width: "50%" }}>리플하다의 가맹점(음식점), 배달, 세척 파트너들은 깨끗한 환경을 위해 쉴새없이 열심히 역할을 해내고 있답니다. 리플하다가 그리는 친환경 세상에 지금 참여하세요.</span>
                     </div>
                     <div style={{ width: "50%", height: "100%" }}>
-                        <img style={{ width: "100%", height: "100%" }} src="./images/partners.jpg" alt="google play store" />
+                        <img style={{ width: "100%", height: "100%" }} src="./images/grim2.png" alt="google play store" />
+                    </div>
+                </div> */}
+
+                {/* pics */}
+
+                {/* Last */}
+
+                <div className="last_pic_container">
+
+                    <div className="last_pic_container_container" >
+                        <img className="last_pic" src="./images/grim3.png" alt="google play store" />
                     </div>
                 </div>
-
-
-
+                {/* Last */}
 
 
                 {/* <Features /> */}
@@ -107,41 +219,45 @@ export default function Home() {
                 {/* <Download /> */}
             </main>
             {/* <Footer /> */}
-
-            <div style={{ height: "150px" }}></div>
-            <div style={{ width: "100%", height: "250px", backgroundColor: "#fff", display: "flex", flexDirection: "row", justifyContent: "space-around", alignItems: "start", borderTop: "1px solid #ebebeb" }}>
-                <div></div>
-                <div style={{ marginTop: "24px", backgroundColor: "#fff", display: "flex", flexDirection: "column", justifyContent: "start", alignItems: "center", }}>
-                    <img src="./images/replhadalogo_2.png" alt="App Preview" style={{ height: "18px", }} />
-                    <span style={{ marginTop: "12px", fontSize: "12px", color: "#888" }}>@2021 dbi, Inc</span>
+            <div className="footer_container" ></div>
+            <div className="footer_container_container"  >
+                <div className="" ></div>
+                <div className="footer_company_container"  >
+                    <img className="footer_company_logo" src="./images/replhadalogo_2.png" alt="App Preview" />
+                    <span className="footer_company_name"  >@2021 dbi, Inc</span>
                 </div>
-                <div style={{ marginTop: "24px", height: "40%", backgroundColor: "#fff", display: "flex", flexDirection: "column", justifyContent: "space-around", alignItems: "start", }}>
-                    <span style={{ marginBottom: "8px", fontSize: "12px", color: "#888" }}>사업자 정보</span>
-                    <span style={{ fontSize: "12px", color: "#888" }}>대표자 : 김기선</span>
-                    <span style={{ fontSize: "12px", color: "#888" }}>주소:경기도 파주시 금바위로 100, 302-904 (10895)</span>
-                    <span style={{ fontSize: "12px", color: "#888" }}>사업자등록번호 : 774-02-01929</span>
-                    <span> </span>
+                <div className="footer_company_info_container"  >
+                    <span className="footer_company_info_text"  >사업자 정보</span>
+                    <span className="footer_company_info_daepyo_text"  >대표자 : 김기선</span>
+                    <span className="footer_company_info_address_text"  >주소:경기도 파주시 금바위로 100, 302-904 (10895)</span>
+                    <span className="footer_company_info_number_text"  >사업자등록번호 : 774-02-01929</span>
+                    <span className="" > </span>
                 </div>
-                <div style={{ marginTop: "24px", height: "40%", backgroundColor: "#fff", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "start", }}>
-                    <span style={{ marginBottom: "8px", fontSize: "12px", color: "#888" }}>고객센터</span>
-                    <span style={{ fontSize: "12px", color: "#888" }}>전화 : 0507-1487-1179</span>
-                    <span style={{ fontSize: "12px", color: "#888" }}>팩스 : 0504-165-1179</span>
-                    <span style={{ fontSize: "12px", color: "#888" }}>이메일 : replhada@gmail.com</span>
-                    <span style={{ fontSize: "12px", color: "#888" }}>카카오톡 : 리플하다</span>
+                <div className="footer_company_contact_container"  >
+                    <span className="footer_company_contact_text"  >고객센터</span>
+                    <span className="footer_company_tel_text"  >전화 : 0507-1487-1179</span>
+                    <span className="footer_company_fax_text"  >팩스 : 0504-165-1179</span>
+                    <span className="footer_company_email_text"  >이메일 : replhada@gmail.com</span>
+                    <span className="footer_company_kakao_text"  >카카오톡 : 리플하다</span>
                 </div>
-                <div style={{ marginTop: "24px", backgroundColor: "#fff", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", }}>
+                <div className="footer_company_sns_container"  >
+                    <a className="nav-link" href={"https://apps.apple.com/kr/app/%EB%A6%AC%ED%94%8C%ED%95%98%EB%8B%A4/id1585597341"} key={"apple-app"}>
 
-                    <AppleIcon style={{
-                        marginRight: "12px",
-                        marginTop: "-3px"
-                    }} />
-                    <img src="./images/play.png" alt="App Preview" style={{ marginRight: "12px", height: "18px" }} />
+                        <AppleIcon className="footer_company_sns_apple" />
+                    </a>
+                    <a className="nav-link" href={"https://play.google.com/store/apps/details?id=com.replhada.replhada"} key={"google-app"}>
 
+                        <img className="footer_company_sns_google" src="./images/play.png" alt="App Preview" />
+                    </a >
+                    <a className="nav-link" href={"https://youtu.be/eBCmgUL-Me8"} key={"youtube"}>
 
-                    <YouTubeIcon style={{ marginRight: "12px" }} />
+                        <YouTubeIcon className="footer_company_sns_youtube" />
+                    </a >
                 </div>
-                <div></div>
+                <div className="" ></div>
             </div>
+
+
 
         </>
     );
